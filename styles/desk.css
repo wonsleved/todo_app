@@ -1,0 +1,54 @@
+/*
+        ASIDE MENU
+ */
+
+.deskbutton {
+    background-color: #fff;
+    border: 2px  black;
+    border-radius: 10px;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    font-size: small;
+    font-style: italic;
+    left: 100px;
+    transition-duration: 0.4s;
+}
+
+.deskbutton:hover{
+    background-color: black;
+    border: 2px solid black;
+    padding: 16px;
+    color: white;
+}
+/*
+.oneDesk{
+    height: 75%;
+    width: 80%;
+    margin: 0;
+    clear: none;
+    display: inline-block;
+}
+
+.oneDesk:hover{
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+}
+
+.deskTitle {
+    height: 75%;
+    width: 80%;
+    margin: 0;
+    clear: none;
+    display: inline-block;
+}
+
+.deskTitle:hover{
+
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+}
+
+ */

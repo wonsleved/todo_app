@@ -1,0 +1,705 @@
+/*
+@import "~materialize-css/dist/css/materialize.min.css";
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    color: #3C3F48;
+    box-sizing: border-box;
+}
+
+
+/*input.yellow-input {*/
+/*    border-bottom: 1px solid #fff!important;*/
+/*    box-shadow: 0 1px 0 0 #fff!important;*/
+/*}*/
+
+/*input.yellow-input + label {*/
+/*    color: #ffffff!important;*/
+/*}*/
+
+/*input.yellow-input:focus + label {*/
+/*    color: #ffffff!important;*/
+/*}*/
+
+/*input.yellow-input:focus {*/
+/*    border-bottom: 1px solid #ffeb3b!important;*/
+/*    box-shadow: 0 1px 0 0 #ffeb3b!important;*/
+/*}*/
+
+/*.note {*/
+/*    display: flex;*/
+/*    justify-content:space-between ;*/
+/*    align-items: center;*/
+
+/*}*/
+/*strong {*/
+/*     margin-right: 1rem;*/
+/* }*/
+
+
+
+/*
+                    NEW
+ */
+
+div.page {
+    background-color: #F4F5F9;
+}
+
+
+
+/*
+    NewNavBar
+*/
+
+nav.NewNavBar {
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    color: #3C3F48;
+
+}
+
+nav.NewNavBar .logo {
+    margin: 0 50px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+nav.NewNavBar .logo span {
+    font-size: 20px;
+}
+
+nav.NewNavBar ul {
+    margin: 0 25px;
+    padding: 0px 0px;
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+}
+
+nav.NewNavBar li {
+    /*padding: 10px 50px 10px 0;*/
+    margin: 0 25px;
+}
+
+nav.NewNavBar a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+}
+
+nav.NewNavBar a[href="/register"] {
+    padding: 15px 30px;
+    border: 1px solid transparent;
+    background-color: #fff;
+    border-radius: 30px;
+    color: #45AF61;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 30px -12px, rgba(0, 0, 0, 0.3) 0px 8px 18px -18px;
+    transition: 0.5s;
+}
+
+nav.NewNavBar a[href="/register"]:hover {
+    border: 1px solid #45AF61;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 30px -12px, rgba(0, 0, 0, 0.3) 0px 4px 18px -18px;
+    transition: 0.5s;
+}
+
+nav.NewNavBar a[href="/auth"] {
+    border: 1px solid transparent;
+    border-radius: 30px;
+    padding: 15px 30px;
+    transition: 0.5s;
+}
+
+nav.NewNavBar a[href="/auth"]:hover {
+    border: 1px solid #45AF61;
+    background-color: #fff;
+    color: #45AF61;
+    transition: 0.5s;
+}
+
+/*
+    Buttons
+ */
+
+nav.NewNavBar button {
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+}
+
+
+
+nav.NewNavBar button.SignUp {
+    padding: 15px 30px;
+    border: 1px solid transparent;
+    background-color: #fff;
+    border-radius: 30px;
+    color: #45AF61;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 30px -12px, rgba(0, 0, 0, 0.3) 0px 8px 18px -18px;
+    transition: 0.5s;
+}
+
+nav.NewNavBar button.SignUp:hover {
+    border: 1px solid #45AF61;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 30px -12px, rgba(0, 0, 0, 0.3) 0px 4px 18px -18px;
+    transition: 0.5s;
+}
+
+nav.NewNavBar button.SignUp:active {
+    box-shadow: inset rgba(50, 50, 93, 0.25) 0px 10px 30px -12px, rgba(0, 0, 0, 0.3) 0px 4px 18px -18px;
+    transition: 0.5s;
+}
+
+nav.NewNavBar button.SignIn {
+    border: 1px solid transparent;
+    background-color: #F4F5F9;
+    border-radius: 30px;
+    padding: 15px 30px;
+    transition: 0.5s;
+}
+
+nav.NewNavBar button.SignIn:hover {
+    border: 1px solid #45AF61;
+    background-color: #fff;
+    color: #45AF61;
+    transition: 0.5s;
+}
+
+nav.NewNavBar button.SignIn:active {
+    border: 1px solid transparent;
+    box-shadow: inset rgba(50, 50, 93, 0.25) 0px 10px 30px -12px, rgba(0, 0, 0, 0.3) 0px 4px 18px -18px;
+    transition: 0.5s;
+}
+
+
+
+/*
+    MainPageMain
+*/
+
+main.startMain {
+    height: 1400px;
+    display: flex;
+    justify-content: center;
+}
+
+main.startMain section {
+    padding: 40px 0;
+    min-width: 400px;
+    width: 50%;
+    text-align: center;
+}
+
+main.startMain section h1 {
+    padding-bottom: 40px;
+    font-size: 48px;
+    color: #22252F;
+}
+
+main.startMain section p {
+    display: block;
+    padding-bottom: 40px;
+}
+
+main.startMain section {
+    display: block;
+    padding-top: 40px;
+}
+
+main.startMain section ul.links {
+    display: flex;
+    justify-content: center;
+}
+
+main.startMain section ul.links li {
+    display: block;
+    margin: 0 10px;
+}
+
+
+
+main.startMain section ul.links li a {
+    display: block;
+    border: 1px solid transparent;
+    border-radius: 30px;
+}
+
+main.startMain section ul.links li a[href="/getstarted"] {
+    font-size: 14px;
+    padding: 15px 52px;
+    background-color: #45AF61;
+    color: #fff;
+    transition: 0.5s;
+}
+
+main.startMain section ul.links li a[href="/getstarted"]:hover {
+    /*border: 1px solid #45AF61;*/
+    /*color: #45AF61;*/
+    /*transition: 0.5s;*/
+    background-color: #3d9d57;
+}
+
+main.startMain section ul.links li a[href="/discoverfeatures"] {
+    font-size: 14px;
+    padding: 15px 30px;
+    background-color: #fff;
+    color: #45AF61;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 30px -12px, rgba(0, 0, 0, 0.3) 0px 8px 18px -18px;
+    transition: 0.5s;
+}
+main.startMain section ul.links li a[href="/discoverfeatures"]:hover {
+    border: 1px solid #45AF61;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 30px -12px, rgba(0, 0, 0, 0.3) 0px 4px 18px -18px;
+    transition: 0.5s;
+}
+
+main.startMain section ul.links li button {
+    display: block;
+    border: 1px solid transparent;
+    border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+/*
+                Auth window
+ */
+
+section.authorization {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.authorization .form {
+    margin: 5% auto;
+    background-color: #fff;
+    width: 30%;
+    height: 420px;
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+section.authorization .form .close{
+    display: flex;
+    justify-content: flex-end;
+}
+
+section.authorization .form .close button {
+    padding: 10px;
+    display: block;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 40px;
+    line-height: 27px;
+    transition: 0.5s;
+}
+
+section.authorization .form .close button:hover {
+    color: #ff5345;
+}
+
+/*
+    Auth window SignIn
+ */
+
+section.authorization .form .inputFields {
+    margin: auto;
+    width: 70%;
+}
+
+
+section.authorization .form label {
+    font-size: 14px;
+    text-align: left;
+    display: block;
+}
+
+section.authorization .form .input-field {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+section.authorization .form input {
+    padding: 3px 5%;
+    outline: none;
+    box-shadow: none;
+    border: 1.5px solid #c8c8c8;
+    display: block;
+    width: 100%;
+    height: 35px;
+}
+
+section.authorization .form input:focus {
+    border: 1.5px solid #414141;
+}
+
+
+
+
+
+section.authorization .form .authButton button {
+    margin-bottom: 30px;
+    display: block;
+    color: #fff;
+    font-weight: normal;
+    border: 1px solid #0069D9;
+    background-color: #0069D9;
+    margin-top: 20px;
+    width: 100%;
+    height: 38px;
+    outline: none;
+    transition: 0.5s;
+}
+
+section.authorization .form .authButton button:hover {
+    background-color: #005dc4;
+    transition: 0.5s;
+}
+
+section.authorization .form .authButton button:active {
+    color: #0069D9;
+    background-color: #fff;
+    /*border: 1px solid transparent;*/
+    box-shadow: inset rgba(50, 50, 93, 0.25) 0px 10px 30px -12px, rgba(0, 0, 0, 0.3) 0px 4px 18px -18px;
+    transition: 0.5s;
+}
+
+section.authorization .form .authButton .switchAuth span{
+    padding: 0;
+    font-size: 12px;
+    word-spacing: normal;
+    color: #005dc4;
+    cursor: pointer;
+}
+
+section.authorization .form .authButton .switchAuth button{
+    height: auto;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    word-spacing: normal;
+    color: #005dc4;
+    cursor: pointer;
+}
+
+section.authorization .form .authButton .switchAuth span:hover {
+    text-decoration: underline #005dc4;
+}
+
+section.authorization .form .authButton .switchAuth button:hover {
+    box-shadow: none;
+    text-decoration: underline #005dc4;
+}
+
+
+
+section.authorization .form .SignInForm {
+    width: 100%;
+    height: 100%;
+}
+
+section.authorization .form .SignInForm span#authSpanToChange{
+    text-align: center;
+    display: block;
+    font-size: 24px;
+    padding: 30px 0 0px;
+    word-spacing: 5px;
+}
+
+section.authorization .form .SignInForm .inputFields span#authErrorMessage {
+    font-size: 14px;
+    text-align: center;
+    /*background-color: rgba(255, 132, 132, 0.3);*/
+    color: rgb(255, 69, 69);
+    display: block;
+    visibility: hidden;
+    width: 100%;
+    padding: 15px 0;
+
+}
+
+
+/*
+        Animations
+*/
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+
+/*
+
+    MAIN APP
+
+ */
+
+main.mainApp {
+    height: 100vh;
+    width: 100vw;
+    /*background-color: #D7D7D7;*/
+    background-color: #F4F5F9;
+}
+
+main.mainApp nav.appNavBar {
+    height: 50px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.16);
+}
+
+main.mainApp #navLogo {
+    display: block;
+    padding: 0 38px;
+}
+
+main.mainApp nav.appNavBar ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main.mainApp nav.appNavBar ul li {
+    height: 100%;
+    display: block;
+    margin-right: 38px;
+    display: flex;
+    align-items: center;
+}
+
+main.mainApp nav.appNavBar ul li a {
+    display: block;
+    padding: 5px 5px;
+}
+
+main.mainApp .sectionContainer {
+    height: calc(100vh - 50px);
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.mainApp section.mainSection {
+    width: calc(100% - 38*2px);
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+main.mainApp section.mainSection section.tasksMain {
+    height: 100%;
+    background-color: #fff;
+    width: calc(100% - 19px - 60px);
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.16);
+    transition: 1s;
+}
+
+
+main.mainApp section.mainSection  .addNew {
+    padding: 10px 0;
+}
+
+main.mainApp section.mainSection label {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+main.mainApp section.mainSection input {
+    display: block;
+    width: 70%;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+main.mainApp section.tasksMain section.taskList {
+    width: 50%;
+    height: 100%;
+}
+
+
+main.mainApp section.mainSection .asideMenu {
+    display: block;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 32px;
+    width: 50px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.16);
+    transition: 1s;
+}
+
+main.mainApp section.mainSection .asideMenu .asideButton {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-weight: bolder;
+    line-height: 100%;
+    position: absolute;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+main.mainApp section.mainSection .asideMenu .asideForm{
+    width: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: 1s;
+}
+
+
+main.mainApp section.mainSection .asideMenu.deskTitle {
+    display: block;
+    width: 100%;
+    word-break: break-word;
+
+}
+
+main.mainApp section.mainSection .asideMenu.deskTitle:hover{
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+}
+
+/*
+        LIST
+ */
+
+main.mainApp section.tasksMain section.taskList {
+    overflow-y: scroll;
+}
+
+main.mainApp section.tasksMain section.taskList::-webkit-scrollbar {
+    display: none;
+}
+
+main.mainApp section.mainSection .oneTask {
+    width: 100%;
+    margin: 0;
+    clear: none;
+    display: inline-block;
+}
+
+main.mainApp section.mainSection span.taskTitle {
+    display: block;
+    width: 100%;
+    word-break: break-word;
+}
+
+main.mainApp section.mainSection span.taskDate {
+    font-size: small;
+    font-style: italic;
+    display: block;
+}
+
+main.mainApp section.mainSection ul li.item {
+    border-radius: 8px;
+    transition: 0.4s;
+    padding: 0 6px;
+    margin-bottom: 10px;
+    display: flex;
+}
+main.mainApp section.mainSection ul li.item:hover {
+    background-color: #F4F5F9;
+    box-shadow: rgba(244, 245, 249, 0.06) 1px 1px 4px 0px inset, rgba(244, 245, 249, 0.06) -1px -1px 4px 0px inset;
+    transition: 0.4s;
+}
+
+main.mainApp section.mainSection ul li.item:hover .itemMenuButton {
+    visibility: visible;
+    background-color: #fff;
+    color: #000;
+    transition: 0.4s;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+main.mainApp section.mainSection ul li .itemMenu {
+    clear: none;
+    display: inline-block;
+    width: 0px;
+    z-index: 1;
+    margin-left: -30px;
+}
+
+main.mainApp section.mainSection ul li .innerMenu {
+    margin-top: 5px;
+    text-align: center;
+}
+
+main.mainApp section.mainSection ul li .innerMenu .itemMenuButton {
+    border-radius: 20px;
+    border: 1px solid transparent;
+    outline: none;
+    border: none;
+    width: 30px;
+    height: 15px;
+    line-height: 4px;
+    align-items: center;
+    display: block;
+    visibility: hidden;
+    color: #fff;
+}
+
+
+main.mainApp section.mainSection ul li .innerMenu .itemMenuButton div {
+    height: 15px;
+    font-size: 16px;
+
+}
+
+/*  Aside   */
+
+main.mainApp section.mainSection section.tasksMain .addNewTask {
+    padding: 10px 0;
+}
+
