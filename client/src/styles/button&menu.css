@@ -1,0 +1,66 @@
+
+.closebutton {
+    background-color: #fff;
+    border: 2px  black;
+    border-radius: 10px;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: small;
+    font-style: italic;
+    left: 100px;
+    transition-duration: 0.4s;
+}
+
+.closebutton:hover{
+    background-color: black;
+    border: 2px solid black;
+    padding: 16px;
+    color: white;
+}
+
+
+/*
+        LIST
+ */
+
+main.mainApp section.desksMain section.taskList {
+    overflow-y: scroll;
+}
+
+main.mainApp section.desksMain section.taskList::-webkit-scrollbar {
+    display: none;
+}
+
+main.mainApp section.mainSection .oneDesk {
+    width: 100%;
+    margin: 0;
+    clear: none;
+    display: inline-block;
+}
+
+main.mainApp section.mainSection span.deskTitle {
+    display: block;
+    width: 100%;
+    word-break: break-word;
+}
+
+main.mainApp section.mainSection span.deskDate {
+    font-size: small;
+    font-style: italic;
+    display: block;
+}
+
+main.mainApp section.mainSection ul li.item {
+    border-radius: 8px;
+    transition: 0.4s;
+    padding: 0 6px;
+    margin-bottom: 10px;
+    display: flex;
+}
+main.mainApp section.mainSection ul li.item:hover {
+    background-color: #F4F5F9;
+    box-shadow: rgba(244, 245, 249, 0.06) 1px 1px 4px 0px inset, rgba(244, 245, 249, 0.06) -1px -1px 4px 0px inset;
+    transition: 0.4s;
+}
