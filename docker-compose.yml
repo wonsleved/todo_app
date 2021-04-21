@@ -9,8 +9,8 @@ services:
     volumes:
       - /app/node_modules
       - ./server:/app
-    ports:
-      - 5000:5000
+#    ports:
+#      - 5000:5000
     networks:
       - library-mern-api
 
@@ -22,10 +22,22 @@ services:
     volumes:
       - ./app/node_modules
       - ./client:/app
-    ports:
-      - 3000:3000
+#    ports:
+#      - 3000:3000
     depends_on:
       - library-api
+    networks:
+      - library-mern-api
+
+  nginx:
+    restart: always
+    depends_on:
+      - library-api
+      - client
+    build:
+      context: ./nginx
+    ports:
+      - 8080:80
     networks:
       - library-mern-api
 
