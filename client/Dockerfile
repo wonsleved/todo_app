@@ -1,4 +1,4 @@
-FROM node:latest AS builder
+FROM node:14-alpine3.10 as builder
 
 LABEL version="1.0"
 LABEL description="Production image for the TODO App frontend"
@@ -9,7 +9,6 @@ COPY package*.json ./
 
 COPY . .
 
-RUN npm ci
 RUN npm run build
 
 
