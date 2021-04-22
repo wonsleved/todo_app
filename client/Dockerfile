@@ -31,12 +31,11 @@ RUN mkdir /app
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY ./* ./
 
 RUN npm install -g npm@7.10.0
 
 RUN npm install
 
-COPY . .
 
 RUN npm run build
