@@ -27,6 +27,8 @@ FROM node:latest AS builder
 LABEL version="1.0"
 LABEL description="Production image for the TODO App Client"
 
+RUN mkdir /app
+
 WORKDIR /app
 
 COPY package*.json ./
