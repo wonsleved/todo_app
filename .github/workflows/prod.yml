@@ -23,7 +23,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}  
 
     - name: Build and push Docker image
-      uses: docker/build-push-action@v2
+      uses: docker/build-push-action@v1
       with:
         repository: wonsleved/todo-app-server
         dockerfile: server/Dockerfile
@@ -43,7 +43,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }} 
 
     - name: Build and push Docker image
-      uses: docker/build-push-action@v2
+      uses: docker/build-push-action@v1
       with:
         repository: wonsleved/todo-app-client
         dockerfile: client/Dockerfile
@@ -62,7 +62,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }} 
 
     - name: Build and push Docker image
-      uses: docker/build-push-action@v2
+      uses: docker/build-push-action@v1
       with:
         repository: wonsleved/todo-app-nginx
         dockerfile: nginx/Dockerfile
