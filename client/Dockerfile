@@ -12,7 +12,9 @@ RUN npm audit fix --force
 
 COPY . .
 
-RUN npm run build --prod
+RUN npm run
+
+RUN npm run build
 
 
 FROM nginx:alpine
