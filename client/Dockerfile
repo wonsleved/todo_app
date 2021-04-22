@@ -4,6 +4,7 @@ LABEL version="1.0"
 LABEL description="Production image for the TODO App frontend"
 
 RUN mkdir -p /app
+RUN cd /app
 
 WORKDIR /app
 
