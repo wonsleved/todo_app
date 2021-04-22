@@ -31,7 +31,7 @@ RUN mkdir /app
 
 WORKDIR /app
 
-COPY ./* ./
+COPY . .
 
 RUN npm install -g npm@7.10.0
 
