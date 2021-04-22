@@ -8,6 +8,7 @@ WORKDIR /app
 COPY ./package*.json /app/package.json
 
 RUN echo ${pwd}
+RUN ls -l
 
 RUN npm install
 
