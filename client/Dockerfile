@@ -12,8 +12,6 @@ RUN npm audit fix --force
 
 COPY . .
 
-RUN npm run
-
 RUN npm run build
 
 
