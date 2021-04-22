@@ -71,4 +71,4 @@ jobs:
         context: .
         file: nginx/Dockerfile
         push: true
-        tags: wonsleved/nginx:latest
+        tags: wonsleved/todo-app-nginx:latest
