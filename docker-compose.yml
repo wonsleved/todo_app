@@ -5,29 +5,27 @@ services:
     restart: always
     build:
       context: ./server
+      dockerfile: Dockerfile.dev
     container_name: test-server-delete
     volumes:
       - /app/node_modules
       - ./server:/app
-    ports:
-      - 5000:5000
-#    networks:
-#      - library-mern-api
+    networks:
+      - library-mern-api
 
   client:
     restart: always
     build:
       context: ./client
+      dockerfile: Dockerfile.dev
     container_name: test-client-delete
     volumes:
       - ./app/node_modules
       - ./client:/app
-    ports:
-      - 3000:3000
     depends_on:
       - library-api
-#    networks:
-#      - library-mern-api
+    networks:
+      - library-mern-api
 
   nginx:
     restart: always
@@ -36,11 +34,12 @@ services:
       - client
     build:
       context: ./nginx
+      dockerfile: Dockerfile.dev
     ports:
       - 8080:80
-#    networks:
-#      - library-mern-api
+    networks:
+      - library-mern-api
 
-#networks:
-#  library-mern-api:
-#    driver: bridge
+networks:
+  library-mern-api:
+    driver: bridge

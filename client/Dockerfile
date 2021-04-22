@@ -1,5 +1,7 @@
 FROM node:12.0-alpine AS builder
-#FROM node:12.0-alpine as builder
+
+LABEL version="1.0"
+LABEL description="Production image for the TODO App frontend"
 
 WORKDIR /app
 
@@ -7,10 +9,8 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 
-EXPOSE 3000
-#RUN npm run build
+RUN npm run build
 
-CMD ["npm", "run", "start"]
 
 FROM nginx
 EXPOSE 3000
