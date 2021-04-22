@@ -22,7 +22,7 @@
 #COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 #COPY --from=builder /app/build /usr/share/nginx/html
 
-FROM node:14-alpine3.10 AS builder
+FROM node:latest
 
 LABEL version="1.0"
 LABEL description="Production image for the TODO App Client"
@@ -34,3 +34,5 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
+
+RUN npm run build
