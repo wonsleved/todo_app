@@ -5,10 +5,7 @@ LABEL description="Production image for the TODO App frontend"
 
 WORKDIR /app
 
-COPY package*.json ./
-
-RUN npm install
-RUN npm audit fix --force
+COPY package.json ./
 
 COPY . .
 
