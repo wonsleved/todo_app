@@ -3,6 +3,8 @@ FROM node:14-alpine3.10 as builder
 LABEL version="1.0"
 LABEL description="Production image for the TODO App frontend"
 
+RUN mkdir -p /app
+
 WORKDIR /app
 
 COPY ./package*.json /app/package.json
