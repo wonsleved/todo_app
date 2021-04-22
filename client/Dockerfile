@@ -31,16 +31,12 @@ RUN mkdir /app
 
 WORKDIR /app
 
-#
-ADD . /app
-#
-
-#COPY package*.json ./
+COPY client/package*.json ./
 
 RUN npm install -g npm@7.10.0
 
 RUN npm install
 
-#COPY . .
+COPY client .
 
 RUN npm run build
