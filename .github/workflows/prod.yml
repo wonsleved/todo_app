@@ -25,6 +25,7 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v1
       with:
+        push: true
         repository: wonsleved/todo-app-server
         dockerfile: server/Dockerfile
         tags: latest
@@ -45,6 +46,7 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v1
       with:
+        push: true
         repository: wonsleved/todo-app-client
         dockerfile: client/Dockerfile
         tags: latest
@@ -64,6 +66,7 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v1
       with:
+        push: true
         repository: wonsleved/todo-app-nginx
         dockerfile: nginx/Dockerfile
         tags: latest
