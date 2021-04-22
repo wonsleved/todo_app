@@ -35,4 +35,4 @@ RUN npm install
 
 COPY . .
 
-RUN npm run buildme
+RUN npm run start
