@@ -25,10 +25,10 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
       with:
+        context: .
+        file: server/Dockerfile
         push: true
-        repository: wonsleved/todo-app-server
-        dockerfile: server/Dockerfile
-        tags: latest
+        tags: wonsleved/todo-app-server:latest
 
   build-and-deploy-client:
     name: Build and Deploy Client
@@ -46,10 +46,10 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
       with:
+        context: .
+        file: client/Dockerfile
         push: true
-        repository: wonsleved/todo-app-client
-        dockerfile: client/Dockerfile
-        tags: latest
+        tags: wonsleved/todo-app-client:latest
   build-and-deploy-nginx:
     name: Build and Deploy Nginx
     runs-on: ubuntu-latest
@@ -66,7 +66,7 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
       with:
+        context: .
+        file: ../../nginx/Dockerfile
         push: true
-        repository: wonsleved/todo-app-nginx
-        dockerfile: nginx/Dockerfile
-        tags: latest
+        tags: wonsleved/nginx:latest
