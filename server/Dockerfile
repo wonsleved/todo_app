@@ -5,10 +5,10 @@ LABEL description="Production image for the TODO App API"
 
 WORKDIR /app
 
-COPY server/package*.json ./
+COPY package*.json ./
 
 RUN npm install
 
-COPY server .
+COPY . .
 
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "server"]
