@@ -7,8 +7,8 @@ services:
     restart: always
     build:
       context: ./server
-#      dockerfile: Dockerfile.dev
-    container_name: test-server-delete
+    image: server
+    container_name: server
     volumes:
       - /app/node_modules
       - ./server:/app
@@ -19,11 +19,12 @@ services:
     restart: always
     build:
       context: ./client
-#      dockerfile: Dockerfile.dev
-    container_name: test-client-delete
+    image: client
+      container_name: client
     volumes:
       - ./app/node_modules
       - ./client:/app
+      - web-root:/usr/share/nginx/html/
     depends_on:
       - library-api
     networks:
@@ -31,16 +32,47 @@ services:
 
   nginx:
     restart: always
-    depends_on:
-      - library-api
-      - client
     build:
       context: ./nginx
-#      dockerfile: Dockerfile.dev
+    image: nginx
+    container_name: nginx
     ports:
-      - 8080:80
+      - "80:80"
+      - "443:443"
+    depends_on:
+        - library-api
+        - client
+    volumes:
+      - ./nginx-conf:/etc/nginx/conf.d
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - dhparam:/etc/ssl/certs
+      - web-root:/usr/share/nginx/html/
     networks:
       - library-mern-api
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - web-root:/usr/share/nginx/html/
+    depends_on:
+      - nginx
+    command: certonly --webroot --webroot-path=/usr/share/nginx/html/ --email 98wonsleved98@gmail.com --agree-tos --no-eff-email --force-renewal -d todoapp.ru  -d www.todoapp.ru
+
+volumes:
+  certbot-etc:
+  certbot-var:
+  web-root:
+  dhparam:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./dhparam/
+      o: bind
+
 
 networks:
   library-mern-api:
