@@ -40,8 +40,8 @@ services:
       - "80:80"
       - "443:443"
     depends_on:
-        - library-api
-        - client
+      - library-api
+      - client
     volumes:
       - ./nginx-conf:/etc/nginx/conf.d
       - certbot-etc:/etc/letsencrypt
