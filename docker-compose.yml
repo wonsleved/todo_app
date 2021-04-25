@@ -20,10 +20,11 @@ services:
     build:
       context: ./client
     image: client
-    container_name: client
+      container_name: client
     volumes:
       - ./app/node_modules
       - ./client:/app
+      - web-root:/usr/share/nginx/html/
     depends_on:
       - library-api
     networks:
@@ -42,8 +43,11 @@ services:
       - library-api
       - client
     volumes:
-      - ./nginx/certbot/conf:/etc/letsencrypt
-      - ./nginx/certbot/www:/var/lib/letsencrypt
+      - ./nginx-conf:/etc/nginx/conf.d
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - dhparam:/etc/ssl/certs
+      - web-root:/usr/share/nginx/html/
     networks:
       - library-mern-api
 
@@ -51,24 +55,23 @@ services:
     image: certbot/certbot
     container_name: certbot
     volumes:
-      - ./nginx/certbot/conf:/etc/letsencrypt
-      - ./nginx/certbot/www:/var/lib/letsencrypt
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - web-root:/usr/share/nginx/html/
     depends_on:
       - nginx
-    entrypoint:  "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
-    networks:
-      - library-mern-api
+    command: certonly --webroot --webroot-path=/usr/share/nginx/html/ --email 98wonsleved98@gmail.com --agree-tos --no-eff-email --force-renewal -d todoapp.ru  -d www.todoapp.ru
 
-#volumes:
-#  certbot-etc:
-#  certbot-var:
-#  web-root:
-#  dhparam:
-#    driver: local
-#    driver_opts:
-#      type: none
-#      device: ./dhparam/
-#      o: bind
+volumes:
+  certbot-etc:
+  certbot-var:
+  web-root:
+  dhparam:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./dhparam/
+      o: bind
 
 
 networks:
