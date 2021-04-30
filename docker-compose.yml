@@ -20,7 +20,7 @@ services:
     build:
       context: ./client
     image: client
-      container_name: client
+    container_name: client
     volumes:
       - ./app/node_modules
       - ./client:/app
@@ -43,11 +43,10 @@ services:
       - library-api
       - client
     volumes:
-      - ./nginx-conf:/etc/nginx/conf.d
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
-      - dhparam:/etc/ssl/certs
       - web-root:/usr/share/nginx/html/
+      - dhparam:/etc/ssl/certs
     networks:
       - library-mern-api
 
